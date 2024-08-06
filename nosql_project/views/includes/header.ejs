@@ -1,0 +1,29 @@
+<header id="main-header">
+  <div id="logo">
+    <a href="/">MyBlog</a>
+  </div>
+  <nav>
+    <ul>
+      <li>
+        <a href="/">All Posts</a>
+      </li>
+      <% if(!locals.isAuthenticated){ %>
+       
+        <li>
+          <a href="/signup">SIGNUP</a>
+        </li>
+        
+        <li>
+          <a href="/login">LOGIN</a>
+        </li>
+        <% }else{ %>
+      <li>
+        <a href="/new-post">Create Post</a>
+      </li>
+      <li>
+        <a href="/logout">LOGOUT</a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</header>

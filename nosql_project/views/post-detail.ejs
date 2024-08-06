@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/head', { title: 'Post title' }) %>
+    <link rel="stylesheet" href="/styles/posts.css">
+    <script src="/scripts/script.js" defer></script>
+</head>
+
+<body>
+  <%- include('includes/header') %>
+    <main id="post-detail">
+      <h1>
+        <%= data.title %>
+      </h1>
+      <section id="post-meta">
+        <%=data.authors.name%>
+          <%=data.date %>
+      </section>
+      <hr>
+      <section>
+        <p id="body">
+          <%=data.content %>
+        </p>
+      </section>
+      <hr>
+         <section id="comment_section">
+          <p>Post might have comments.You can load themif you want to view them </p>
+          <button id="btn" class="btnn" data-post=<%=data._id%> >See comments</button>
+
+         </section> 
+   
+      <span id="ajax_data">
+      </span>
+      
+      <section id="comment_form">
+        <h1>Leave comment</h1>
+        <form id="form_comments" data-post=<%=data._id%>>
+          <ul id="lists">
+            <li><label for="title">Comment title</label>
+              <input type="text" name="title" id="title">
+            </li>
+            <li><label for="comm">Your comment </label>
+              <textarea name="comment" id="comm" cols="30" rows="4"></textarea>
+            </li>
+            <li>
+              <button class="btnn" type="submit" >Save comment</button>
+            </li>
+          </ul>
+        </form>
+      </section>
+    </main>
+</body>
+
+</html>

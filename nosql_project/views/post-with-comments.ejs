@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <%- include('includes/head', { title: 'Post title' }) %>
+  <link rel="stylesheet" href="/styles/posts.css">
+</head>
+
+<body>
+  <%- include('includes/header') %>
+    <main id="post-detail">
+      <h1>
+        <%= data.title %>
+      </h1>
+      <section id="post-meta">
+        <%=data.authors.name%>
+          <%=data.date %>
+      </section>
+      <hr>
+      <section>
+        <p id="body">
+          <%=data.content %>
+        </p>
+      </section>
+      <hr>
+      <h1 id="h1">List of all comments</h1>
+      <%for(let content of data_1) {%>
+      <section id="comments">
+        
+      <%-include("./includes/post-details-comments",{content:content})%>
+    
+      </section>
+      <%}%>
+      <section id="comment_form">
+        <h1>Leave comment</h1>
+        <form action="/comment/<%=data._id%>/store" method="POST">
+          <ul id="lists">
+            <li><label for="title">Comment title</label>
+              <input type="text" name="title" id="title">
+            </li>
+            <li><label for="title">Your comment </label>
+              <textarea name="comment" id="title" cols="30" rows="4"></textarea>
+            </li>
+            <li>
+              <button class="btnn">Save comment</button>
+            </li>
+          </ul>
+     </form>      
+    </section>
+  </main>
+</body>
+
+</html>

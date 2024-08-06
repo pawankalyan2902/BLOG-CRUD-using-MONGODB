@@ -1,0 +1,17 @@
+<% for(const details of data) {%>
+<article class="post-item">
+  <h2><%=details.title  %></h2>
+  <p class="post-item-author">By <%=details.authors.name%></p>
+  <p><%=details.summary  %></p>
+  <div class="post-actions">
+    <%if(locals.user_mail==details.user_email) { %>
+    <form action="/delete/<%=details._id  %>" method="post">
+      <input type="hidden">
+      <button class="btn btn-alt">Delete Post</button>
+    </form>
+    <a href="/edit/<%=details._id%>">Edit Post</a>
+    <% } %>
+    <a class="btn" href="/view/<%=details._id%>">View Post</a>
+  </div>
+</article>
+<% } %>

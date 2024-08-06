@@ -1,0 +1,150 @@
+/* All posts page */
+
+#all-posts {
+  text-align: center;
+}
+
+#posts-list {
+  margin: 3rem auto;
+  max-width: 40rem;
+}
+
+.post-item {
+  margin: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: rgb(220, 204, 252);
+}
+
+.post-item h2,
+.post-item p {
+  margin: 0.5rem 0;
+}
+
+.post-item-author {
+  font-style: italic;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.post-actions .btn-alt {
+  padding: 0;
+}
+
+/* Post detail page */
+
+#post-meta {
+  color: rgb(156, 149, 149);
+  
+}
+
+#post-meta address {
+  display: inline;
+}
+
+#post-meta time {
+  font-style: italic;
+}
+
+#body {
+  white-space: pre-wrap; /* This ensures that line breaks and whitespace are kept */
+}
+
+#comments
+{
+  text-align: center;
+   padding: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px black; */
+    border: 2px ;
+    width: 20rem;
+    margin: auto;
+    border: 2px solid #1304042e;
+    margin-bottom: 2rem;
+}
+#comment_form
+{
+  text-align: center;
+  text-align: center;
+  width: 20rem;
+  margin: auto;
+  border: 2px solid #1304042e;
+  margin-top: 5rem;
+  padding: 1rem;
+  box-shadow: 2px 2px 2px  black;
+}
+#lists li
+{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  text-align: left;
+  padding-bottom: 5px;
+}
+
+.btnn {
+  cursor: pointer;
+  font: inherit;
+  background-color: rgb(89, 0, 255);
+  border: 1px solid rgb(89, 0, 255);
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  width: 11rem;
+  height: 3rem;
+  margin-top: 1rem;
+}
+
+
+.btnn:hover,
+.btnn:active {
+  background-color: rgb(71, 4, 196);
+  border-color: rgb(71, 4, 196);
+  color: white;
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+input, textarea, select {
+  font: inherit;
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: 1px solid rgb(204, 204, 204);
+}
+
+input:focus,
+textarea:focus {
+  background-color: rgb(237, 228, 255);
+}
+
+#h1{
+  text-align: center;
+}
+
+#ajax_data
+{
+  text-align: center;
+   padding: 0.5rem;
+    /* box-shadow: 2px 2px 2px 2px black; */
+    border: 2px ;
+    width: 20rem;
+    margin: auto;
+    border: 2px solid #1304042e;
+    margin-bottom: 2rem;
+  display: none;
+}
+
+#btn{
+  display: block;
+  margin:2rem auto;
+}
