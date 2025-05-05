@@ -15,7 +15,6 @@ const dbs = require("../database/database");
 router.get('/',async function (req, res) {
   const data= await dbs.getdb().collection("tech_info").find({}).project({content:0}).toArray();
   res.render('posts-list',{data:data});
-  
 });
 
 //to create a new post
@@ -209,6 +208,7 @@ router.post('/login', async function (req, res) {
 router.get("/logout",function(req,res)
 {
   req.session.isAuthenticated=false;
+  req.session.user_mail=null;
   res.redirect("/");
 })
 
